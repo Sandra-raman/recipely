@@ -1,1 +1,58 @@
-<p>header works!</p>
+
+    <nav class="navbar navbar-light bg-body-tertiary">
+        <div class="container-fluid align-items-center">
+            <!-- Brand and Logo -->
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-utensils fs-3"></i>
+                <small class="ms-2 fs-4 text-success">Recipely</small>
+            </div>
+
+            <!-- Centered Links -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <a href="" class="nav-link mx-3 fs-5 text-dark">Home</a>
+                <a href="allrecipe" class="nav-link mx-3 fs-5 text-dark">Recipes</a>
+                <a href="about" class="nav-link mx-3 fs-5 text-dark">About</a>
+                <a href="contact" class="nav-link mx-3 fs-5 text-dark">Contact</a>
+            </div>
+
+            <!-- Logout Dropdown -->
+             
+            <div class="d-flex" role="search">
+                <li class="nav-item dropdown" style="list-style: none;">
+                  @if(isLoggedIn)
+                  {
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-user fs-3 mx-2"></i> Hey, {{loggedUserName}}
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" routerLink="/login">Profile</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" routerLink="/register">Saved Recipe</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" >Logout</a>
+                      </li>
+                    </ul>
+                  }
+                  @else
+                  {
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-user fs-3 mx-2"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" routerLink="/login">Login</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" routerLink="/register">Register</a>
+                      </li>
+                    </ul>
+                  }
+                </li>
+              </div>
+              
+        </div>
+    </nav>
+

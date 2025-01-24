@@ -1,1 +1,26 @@
-<p>contact works!</p>
+<div class="bg">
+    <h2 class="text-center py-3">Contact Us</h2>
+    <p class="p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque sint omnis minima? Cumque tenetur officiis saepe voluptatem nisi ipsum, porro suscipit? Quod non provident rerum corporis repellendus, deserunt explicabo quo!</p>
+    
+</div>
+<div class="row mt-5">
+    <div class="col-6 text-center mt-5">
+        <h4>Get In Touch</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores amet culpa odio totam maiores officia distinctio, et, architecto maxime, vitae alias. Similique amet et consequuntur itaque placeat tempore. Blanditiis, consectetur.</p>
+        <i class="fa-solid fa-location-crosshairs me-2"></i><b>Address:</b><br>
+        <i class="fa-solid fa-phone me-2"></i><b>Phone:</b><br>
+        <i class="fa-solid fa-envelope me-2"></i><b>Address:</b>
+    </div>
+    <div class="col-6 px-4 mb-5">
+        <form (ngSubmit)="addTestimony()" [formGroup]="testimonyForm">
+            <div class="border rounded shadow text-center size">
+                <h3 class="text-center my-3">Client Testimony</h3>
+                <input type="text" placeholder="Name" formControlName="name" class="form-control my-3" style="width: 400px; margin-left: 80px;">
+                <input type="text" placeholder="E Mail" formControlName="email" class="form-control my-3" style="width: 400px; margin-left: 80px;">
+                <textarea name="Message" placeholder="Message" formControlName="message" class="form-control my-3" style="width: 400px; margin-left: 80px;"></textarea>
+                <p style="width: 400px; margin-left: 80px;">By Submitting,your agreeing the terms and conditions of our website.We may use your details in our site</p>
+                <button class="btn btn-success mb-5">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,1 +1,32 @@
-<p>register works!</p>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 border shadow rounded my-5 text-center">
+        <div class="d-flex align-items-center my-4 " style="margin-left: 160px;">
+            <i class="fa-solid fa-utensils fs-3"></i>
+            <small class="ms-2 fs-4 text-success">Recipely</small>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="Registeration()">
+        <input type="text" formControlName="username" placeholder="Username" class="form-control my-3">
+        <div>
+            @if(registerForm.get("username")?.errors && registerForm.get("username")?.touched){
+                <span class="text-danger " style="float: left;" >*Invalid Username</span>
+            }
+        </div>
+        <input type="email" formControlName="email" placeholder="Email" class="form-control">
+        <div>
+            @if(registerForm.get("email")?.errors && registerForm.get("email")?.touched){
+                <span class="text-danger" style="margin-right: 320px;">*Invalid Email</span>
+            }
+        </div>
+        <input type="password" formControlName="password" placeholder="Password" class="form-control my-3">
+        <div>
+            @if(registerForm.get("password")?.errors && registerForm.get("password")?.touched){
+                <span class="text-danger mb-3" style="float: left;">*Invalid Password</span>
+            }
+        </div>
+        <button  class="btn btn-success my-5" routerLink="/login">Register</button>
+    
+        </form>
+        </div>
+    <div class="col-4"></div>
+</div>

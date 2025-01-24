@@ -1,1 +1,32 @@
-<p>home works!</p>
+<div>
+  <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528" width="100%" height="500px" alt="">
+</div>
+  <div class="d-flex">
+    <h2 class="ms-3">Popular Recipes of the Week</h2>
+  <h4 style="margin-left: 800px;" routerLink="allrecipe">view Recipes</h4>
+  </div>
+  <div class="row text-center my-5" style="margin-left: 180px;">
+  @for(item of homerecipeList;track $index){
+    <div class="col-3 " style="margin-left: 16px;">
+      <div class="card" style="width: 18rem;">
+          <img [src]="item.image" class="card-img-top p-1 rounded" height="250px" alt="..." >
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>              
+          </div>
+        </div>
+  </div>
+  }
+    
+  </div>
+  <img src="https://assets.epicurious.com/photos/6164955a4ec4c7291c4d1076/16:9/w_2560%2Cc_limit/BestTablets_INSET_V1_120519_13636_V3_final.jpg" height="500px" width="100%" alt="">
+  <div class="container">
+    <h4 class="text-center mt-3">Client Testimonials</h4>
+    <marquee width="100%" direction="left" height="200px" class="mt-4">
+        <div class="card shadow p-3">
+            <h3 class="color text-center">Name: Arun</h3>
+            <h5 class="color text-center">Tasty food</h5>
+        </div>
+    </marquee>
+   
+
+  </div>
